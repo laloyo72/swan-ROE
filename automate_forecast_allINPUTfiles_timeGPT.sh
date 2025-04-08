@@ -10,7 +10,7 @@ set -e
 
 # Deactivate conda and Activate the Python virtual environment
 #conda deactivate
-source /home/laloyo/environments/utm_env/bin/activate
+source /home/laloyo/environments/utm_env/bin/activate #path to you venv
 
 # Define case and corresponding bc point coords
 # TODO: auto
