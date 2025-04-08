@@ -17,6 +17,13 @@ python3 -m venv utm_env # you could call utm_env as you wanted and modify its so
 source utm_env/bin/activate  # linux
 pip install -r requirements.txt
 ```
+### 4. Create a Nixtla Account (if model adjustment with timeGPT is wanted)
+If you do not want to adjust the model's output with timeGPT just comment the line that executes `timeGPT.py` in the bash script.
+Otherwise, go to [nixtla dashboard](dashboard.nixtla.io) and create an account. Once there, create an API key and save it in a `.env` file in the timeGPT folder. You can follow the instructions provided in section 2b of [Nixtla repo api-key set-up](https://nixtlaverse.nixtla.io/nixtla/docs/getting-started/setting_up_your_api_key.html)
+```bash
+vi .env
+```
+and write NIXTLA_API_KEY=your_api_key
 ## Project Overview
 Here's a tree of the project folder structure:
 ```
@@ -87,14 +94,22 @@ swan-ROE
 
 - **`/timeGPT/`**: 
   - `timeGPT.py`: Runs timeGPT using each day swan fcst. It adjustes the model's result to what the tyde gauge in located in Palma de Mallorca could measure.
-  - `.env`: I have not uploaded mine. You will need to create a nixtla account and save the nixtla key here. More info in [Nixtla repo. sec. 2b](https://nixtlaverse.nixtla.io/nixtla/docs/getting-started/setting_up_your_api_key.html).
+  - `.env`: I have not uploaded mine. You will need to create a nixtla account and save the nixtla key here.
 
 - **`.gitignore`**: Specifies which files and folders should be ignored by git.
 
 - **`requirements.txt`**: A list of all the Python dependencies needed to run the project. You can install the necessary packages using `pip install -r requirements.txt`.
 
 - **`README.md`**: This file that explains the purpose and structure of the repository.
-# How to use
-# Create a new case
+## How to use
+If the Requirements are satisfied you should be able to run the operational system like:
+```bash
+./automate_forecast_allINPUTfiles_timeGPT.sh
+```
+This will launch the forecast process. You’ll see output files created in the following locations:
+- 🌊 **SWAN predictions** → `./cases/palma/output/times/YYYYMM/`
+- 🤖 **TimeGPT predictions** → `./timeGPT/prediction/YYYYMM/`
+
+## Create a new case
 
 
