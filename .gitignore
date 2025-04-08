@@ -6,6 +6,7 @@
 
 # except some files/folders we want to upload to the repo
 !/automate_forecast_allINPUTfiles_timeGPT.sh
+!/cases/
 !/cases/palma/
 !/scripts/*
 !/DATA/
