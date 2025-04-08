@@ -8,6 +8,7 @@
 !/automate_forecast_allINPUTfiles_timeGPT.sh
 !/cases/palma/
 !/scripts/*
+!/DATA/
 !/DATA/coastline/
 !/DATA/bathy/
 !/DATA/polygon/
