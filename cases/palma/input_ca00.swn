@@ -1,0 +1,51 @@
+PROJ 'PALMA' 'ca00' 
+$ NONSTATIONARY 
+SET level=0 NAUTICAL
+MODE NONSTationary TWODimensional 
+COORDINATES CARTESIAN  
+$ 
+CGRID   463400 4376500 0 12600 4000 63 20 CIRCLE 72 0.0345 1.00  34 
+$ 
+INPGRID   BOTTOM  REGULAR 463400 4376500 0 63 20 200 200 EXC -99.0 
+READINP   BOTTOM 1 'bathy/bottom_ca00_HRES_matrix.dat' 1 0 FREE
+$ 
+$ NO WIND 
+$ Input Boundary Conditions: one point
+BOUN SHAPE JONSWAP 3.3 PEAK  DSPR  DEGREES 
+BOUN  SIDE N CON FILE '/home/laloyo/swan/cases/palma/input/simar/point/202504/TPAR_north_TPAR_HW-2025040713-2025041012-B2025040712-FC_point_39.5_2.65.txt'
+BOUN  SIDE W CON FILE '/home/laloyo/swan/cases/palma/input/simar/point/202504/TPAR_west_TPAR_HW-2025040713-2025041012-B2025040712-FC_point_39.5_2.65.txt'
+BOUN  SIDE E CON FILE '/home/laloyo/swan/cases/palma/input/simar/point/202504/TPAR_east_TPAR_HW-2025040713-2025041012-B2025040712-FC_point_39.5_2.65.txt'
+BOUN  SIDE S CON FILE '/home/laloyo/swan/cases/palma/input/simar/point/202504/TPAR_south_TPAR_HW-2025040713-2025041012-B2025040712-FC_point_39.5_2.65.txt'
+$
+INITIAL
+$
+OFF QUAD 
+OFF WCAP 
+GEN1 
+BREA 
+FRICTION JONSWAP 
+$
+PROP BSBT
+$ 
+$NGRID 'nest1' 532307.9258 4381270.1866 0 3800 3800 19 19 
+$$$$$OUTPUT1$$$$$
+$ as no OUTPUT is selected, last time-step is requested
+$ BLOCK 'COMPGRID' NOHEAD 'Malla_ext_ca05.mat' LAY 3 XP YP DEP HSIGN TM02 RTP DIR
+
+$$$$$OUTPUT2$$$$$
+$ output timestamp requested every 1h 
+BLOCK 'COMPGRID' NOHEAD '/home/laloyo/swan/cases/palma/output/times/202504/Malla_ca00_F3_20250408_20250409.mat' LAY 3 XP YP DEP HSIGN TM02 RTP DIR OUTPUT 20250408.000000 1 HR
+
+$$$$$OUTPUT3$$$$$
+$output that tries to be in mareograf puertos Mallorca Palma: (39.56 2.64)
+$POINTS 'POINT' 469074.15 4378985.26
+$ we are going to try to take another point a bit closer to dique, so that depth is smaller
+POINTS 'POINT' 468903.23 4379100.91
+TABle 'POINT' HEADER '/home/laloyo/swan/cases/palma/output/times/202504/tableP_ca00_F3_20250408_20250409.txt' TIME XP YP DEP HSIGN TM02 RTP DIR OUTPUT 20250408.000000 1 HR
+$
+$
+$ 
+TEST  1,0 
+COMPUTE NONSTat 20250408.000000 1 HR 20250409.000000
+STOP
+$ 

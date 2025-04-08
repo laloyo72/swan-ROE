@@ -1,0 +1,10 @@
+$ PALMA
+lat, lon, easting, northing, zone, len, pos
+$$39.545647, 2.618286, 467202, 4377400, 31S, 7200, abajo izda
+$$39.545892, 2.702080, 474402, 4377400, 31S, , abajo drcha
+$ NOTE: alfinal lo voy a hacer más grande
+lat, lon, easting, northing, zone, len, pos
+39.537384, 2.574087, 463400, 4376500, 31S, 12600, abajo izda
+39.537829, 2.720711, 476000, 4376500, 31S, 4000, abajo drcha
+39.573870, 2.720566, 476000, 4380500, 31S, 12600, arriba drcha
+39.573425, 2.573867, 463400, 4380500, 31S, 4000, arriba izda

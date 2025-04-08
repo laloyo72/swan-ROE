@@ -1,0 +1,14 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%^w^%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+usr: laloyo
+last modified: 19-02-2025
+title: case definitions palma
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%^w^%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ca00: reference case copied from boya. changed domain and made for automatization
+ca01: ca00 but not forecast, passed month, to compare with mareopgrafo puertos. Unfortunately, mareografo puertos does not have Hsig and RTpeak available, we calculate it with joan matlab script
+ca02: ca00 but for 202502 - really similar results
+ca03: ca00 but for 202402-202502 to compare with mareograf csv data send by puertos
+
+DIRECTORIES:
+output_p1:
+try we are doing to verify FILE0,FILE1,FILE2,FILE3 accuracy, each one with the corresponding end_date

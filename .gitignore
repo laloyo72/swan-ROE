@@ -20,7 +20,7 @@
 **/*.h5
 **/*.csv
 **/*.log
-**/*.mat
+**/*.mat*
 **/*.txt
 **/*.o
 **/*.f
@@ -31,6 +31,7 @@
 **/*.jpg
 **/*.prt
 **/*.erf
+**/*.m
 
 # also idk why i have jupyter notebook jj
 .ipynb_checkpoints/
