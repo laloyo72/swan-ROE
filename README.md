@@ -19,39 +19,44 @@ pip install -r requirements.txt
 ```
 ## Project Overview
 ```
-project
+swan-ROE
+│   automate_forecast_allINPUTfiles_timeGPT.sh
+│   requirements.txt  
 │   README.md
-│   requirements.txt    
-│
-└───DATA
-│   │
-│   └───bathy
-│       │   file112.txt
-│       │   ...
-│   │
-│   └───opendap
-│       │   file111.txt
-│       │   file112.txt
-│       │   ...
+│   requirements.txt
 │
 └───cases
 │   │
 │   └───palma
-│       │   file112.txt
+│       │   input_ca00.swn
+│       │   input_ca01.swn
+│       │   input_ca02.swn
+│       │   input_ca03.swn
+│
+└───DATA
+│   │
+│   └───bathy
+│       │   BatimetriaRegenerada_mallorca.dat
+│   │
+│   └───coastline
+│       │   mallorca_coastline.dat
+│       │   mallorca_coastline_utm.dat
+│       │   ...
+│   │
+│   └───polygon
+│       │   mallorca_polygon.cpg
+│       │   ...
+│ 
 └───scripts
 │   │
 │   └───bathy
-│       │   file112.txt
-│       │   ...
+│       │   interpolate2.py
 │   │
 │   └───opendap
-│       │   file111.txt
-│       │   file112.txt
-│       │   ...
-│   
-└───folder2
-    │   file021.txt
-    │   file022.txt
+│       │   save_simar_point_to_TPAR.py
+│  
+└───timeGPT
+    │   timeGPT.py
 ```
 
 
