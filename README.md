@@ -23,6 +23,21 @@ project
 │   README.md
 │   requirements.txt    
 │
+└───DATA
+│   │
+│   └───bathy
+│       │   file112.txt
+│       │   ...
+│   │
+│   └───opendap
+│       │   file111.txt
+│       │   file112.txt
+│       │   ...
+│
+└───cases
+│   │
+│   └───palma
+│       │   file112.txt
 └───scripts
 │   │
 │   └───bathy
