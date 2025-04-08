@@ -28,6 +28,8 @@
 **/*.ftn90
 **/*.png
 **/*.jpg
+**/*.prt
+**/*.erf
 
 # also idk why i have jupyter notebook jj
 .ipynb_checkpoints/
