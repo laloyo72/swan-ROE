@@ -32,7 +32,7 @@
 **/*.prt
 **/*.erf
 **/*.m
-
+**/*.env
 # also idk why i have jupyter notebook jj
 .ipynb_checkpoints/
 
