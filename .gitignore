@@ -1,0 +1,35 @@
+# gitignore
+# by @laloyo
+# last modified: 08/04/2025
+#we start by ignoring everything
+/*
+
+# except some files/folders we want to upload to the repo
+!/automate_forecast_allINPUTfiles_timeGPT.sh
+!/cases/palma/
+!/scripts/*
+!/DATA/coastline/
+!/DATA/bathy/
+!/DATA/polygon/
+!/timeGPT/
+
+# ignore what we do not want to upload: figures, outputs, heavy data. the .dat are uploaded as there is the bathymetry, coastline etc
+**/*.nc
+**/*.h5
+**/*.csv
+**/*.log
+**/*.mat
+**/*.txt
+**/*.o
+**/*.f
+**/*.ftn
+**/*.f90
+**/*.ftn90
+**/*.png
+**/*.jpg
+
+# also idk why i have jupyter notebook jj
+.ipynb_checkpoints/
+
+# ignore nixtla key written in ./timeGPT/.env
+./timeGPT/.env
