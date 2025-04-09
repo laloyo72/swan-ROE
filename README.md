@@ -1,4 +1,4 @@
-# HRES operational for Wave Forecasting
+# HRES operational system for Wave Forecasting
 This system forecasts +24h of wave conditions around the Balearic Islands. It focuses on Palma de Mallorca's bay/port, but it can be adapted to any location within Mallorca.
 ## Requirements
 Before running the system, you need to set up a few things:
