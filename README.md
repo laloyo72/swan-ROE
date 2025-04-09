@@ -112,9 +112,9 @@ This will launch the forecast process. You’ll see output files created in the 
 
 **EXTRA**: How to run it daily using Crontab
 
-To schedule daily runs, you can use the following crontab command:
+To schedule daily runs, you can use the following crontab command (substitute with your actual necessities):
 ```cron
-MM H * * * /path/to/you/bash/script >> /path/to/your/log/file 2>&1
+mins hour * * * /path/to/you/bash/script >> /path/to/your/log/file 2>&1
 ```
 ## Create a new case
 
