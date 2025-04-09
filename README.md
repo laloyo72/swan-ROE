@@ -110,6 +110,47 @@ This will launch the forecast process. You’ll see output files created in the 
 - 🌊 **SWAN predictions** → `./cases/palma/output/times/YYYYMM/`
 - 🤖 **TimeGPT predictions** → `./timeGPT/prediction/YYYYMM/`
 
+**EXTRA**: How to run it daily using Crontab
+
+To schedule daily runs, you can use the following crontab command:
+```cron
+MM H * * * /path/to/you/bash/script >> /path/to/your/log/file 2>&1
+```
 ## Create a new case
+
+Here are the steps:
+
+1. **Create a new directory** in `cases` called `case_name`.
+
+2. **Copy** `swan.exe` and `swanrun` to that directory.
+
+3. **Copy the default INPUT file** (`input_ca00.swn`) to the folder and modify the following lines:
+
+   - **Line 1**: Replace with your case name:
+     ```
+     PROJ 'CASENAME' 'ca00'
+     ```
+     Change `'CASENAME'` to your desired case name.
+
+   - **Line 7**: Modify the grid coordinates to the study location:
+     ```
+     CGRID   [xpc] [ypc] [alpc] [xlenc] [ylenc] [mxc] [myc] CIRCLE 72 0.0345 1.00  34
+     ```
+     Use UTM coordinates. See more details in the [SWAN User Manual](https://swanmodel.sourceforge.io/download/zip/swanuse.pdf).
+
+4. **Modify the Bash script**:
+
+   - **Line 28**: Set your case name:
+     ```bash
+     CASE="case_name"
+     ```
+
+   - **Line 73**: Uncomment this line to generate the interpolated bathymetry for the new region.(remove the #)
+     ```bash
+     python3 /home/laloyo/swan/scripts/bathy/interpolate2.py "$CASE" "$SWAN_CASE"
+     ```
+
+5. **Enjoy your new case!**  
+   Adapt the physics as wanted or needed :3
 
 
